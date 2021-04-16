@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		.child{
+			
+			width: 50%;
+			float: left;
+			
+		}
+		.child1{
+			
+			width: 50%;
+			float: right;
+		}
+	</style>
+</head>
+<body style="background-color: ">
+		<header style="background-color: #7952B3; height: 100px; margin-left: -10px;">
+   		<p style="color: #7952B3;">asdasda</p>
+		<p style="margin-left: 100px; font-size: 25px; font-family: arial; color: white; font-weight: bold;">Friends and Friend Suggestions</p>
+	</header>
+<section class="child">
+		<p><H1>FRIENDS<H1></p>
+		<div class="content-table" style="width: 100%;">
+	     {% for f in friends %}      
+         <div class="box"><a href="/user/{{ f[0] }}">{{ f[1] }}</a></div>  
+         {% endfor %}
+		
+	</section>
+	<section class="child1">
+		<p><H1>SUGGESTIONS<H1></p>
+		
+		 {% for s in suggestion %}      
+         <div class="box"><a href="/user/{{ s[0] }}">{{ s[1] }}</a></div>  
+         {% endfor %}
+
+
+
+
+
+       
+
+	</section>
+	<style type="text/css">
+		.child{
+			margin-top: 10px;
+			text-align: center;
+			padding: 10px 10px;
+		}
+		.child1{
+			margin-top: 10px;
+			text-align: center;
+			padding: 10px 10px;
+		}
+		.box{
+			
+			padding: 30px;
+    		height: 50px;
+    		width: 500px;
+    		margin: auto;
+    		
+		}
+		a{
+			text-decoration: none;
+    		background-color: whitesmoke;
+    		font-family: arial;
+    		color: black;
+    		width: 500px;
+  			border: 2px solid #E3C3FF;
+  			border-radius: 25px;
+  			float: left;
+  			padding: 5px 5px 5px 5px;
+  			text-align: center;
+  			text-decoration: none;
+  			display: inline-block;
+  			font-size: 30px;
+  			margin: 4px 2px;
+  			cursor: pointer;
+		}
+		h1{
+			color: #9263D9;
+			font-family: arial;
+		}
+	</style>
+</body>
+</html>

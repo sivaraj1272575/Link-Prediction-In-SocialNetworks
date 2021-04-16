@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+   <body  style="color: black;">
+   	<header style="background-color: #7952B3; height: 100px; margin-left: -10px;">
+   		<p style="color: #7952B3;">asdasda</p>
+		<p style="margin-left: 100px; font-size: 25px; font-family: arial; color: white; font-weight: bold;">Friends and  Suggestions</p>
+	</header>
+
+	<div class="content-table" style="width: 100%;">
+	
+		 {% for id, name in users.items() %}
+    
+       <div class="box"><a href="/user/{{ id }}">{{ name }}</a> </div>
+    
+         {% endfor %}
+	</div>
+   
+   
+    <style>
+
+    	.content-table td{
+    		padding: 12px 15px;}
+
+    	a{
+    		text-decoration: none;
+    		background-color: whitesmoke;
+    		font-family: arial;
+    		color: black;
+    		width: 100px;
+  			border: 2px solid #E3C3FF;
+  			border-radius: 25px;
+  			float: left;
+  			padding: 5px 5px 5px 5px;
+  			text-align: center;
+  			text-decoration: none;
+  			display: inline-block;
+  			font-size: 20px;
+  			margin: 4px 2px;
+  			cursor: pointer;
+    	}
+    	.box{
+    		padding: 30px;
+    		height: 50px;
+    		width: 150px;
+    		float: left;
+    	}
+    </style>
+      
+   </body>
+</html>
